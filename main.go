@@ -7,7 +7,8 @@ import (
 	stdlog "log"
 	"net/http"
 	"os"
-	"syscall"
+	// REMOVED - ONLY USED BY syscall.Umask()
+	// "syscall"
 
 	"github.com/julienschmidt/httprouter"
 	"github.com/rs/cors"

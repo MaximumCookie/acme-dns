@@ -17,7 +17,10 @@ import (
 
 func main() {
 	// Created files are not world writable
-	syscall.Umask(0077)
+	
+	// BREAKS WINDOWS COMPATIBILITY
+	// syscall.Umask(0077)
+	
 	// Read global config
 	var err error
 	if fileIsAccessible("/etc/acme-dns/config.cfg") {
